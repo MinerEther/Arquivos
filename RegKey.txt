@@ -3,7 +3,7 @@ REG:TRegistry;
 begin
 REG := TRegistry.Create;
 REG.RootKey := HKEY_CURRENT_USER;
-REG.OpenKey('Software\Microsoft\Windows\CurrentVersion\Run\',false)
+REG.OpenKey('Software\Microsoft\Windows\CurrentVersion\Run\',false);
 REG.WriteString('Meu Programa',ParamStr(0));
 REG.CloseKey;
 REG.Free;
